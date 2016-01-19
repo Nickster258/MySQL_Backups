@@ -1,5 +1,5 @@
 #!/bin/bash
-now=`date +%Y-%m`
+now=`date +%Y-%m-%d`
 db="DATABASESAVENAME"
 dbuser="MYSQLUSER"
 host="DATABASEHOST"
