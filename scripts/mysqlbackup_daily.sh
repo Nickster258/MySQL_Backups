@@ -5,5 +5,6 @@ dbuser="MYSQLUSER"
 host="DATABASEHOST"
 pass="MYSQLPASSWORD"
 systemuser="SYSTEMUSER"
-mysqldump -u"$dbuser" -h"$host" -p"$pass" --hex-blob --routines --triggers --all-databases | gzip > /home/"$systemuser"/MySQLBackups/daily/"$db"_"$now".sql.gz
-find /home/mcadmin/MySQLBackups/daily/ -mindepth 1 -mtime +30 -delete
+dbdirectory="DIRECTORYLEADINGUPTOMYSQL_BACKUPSFOLDER"
+mysqldump -u"$dbuser" -h"$host" -p"$pass" --hex-blob --routines --triggers --all-databases | gzip > "$dbdirectory"/MySQLBackups/daily/"$db"_"$now".sql.gz
+find "$dbdirectory"/MySQLBackups/daily/ -mindepth 1 -mtime +30 -delete
