@@ -8,4 +8,5 @@ Currently it saves one every month including one every day for the last 30 days.
 In order for this script to be automated, these scripts have to be added to crontab.
 
 @monthly /directorychosenforscripts/mysqlbackup_monthly.sh
+
 @daily /directorychosenforscripts/scripts/mysqlbackup_daily.sh
